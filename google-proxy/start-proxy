@@ -1,0 +1,13 @@
+#install shadowsocks
+sudo apt-get update
+sudo apt-get install python-pip
+sudo apt-get install python-setuptools m2crypto
+sudo pip install shadowsocks
+#install success
+echo "install end"
+tar xvf tools.tar.gz 
+cd tools/proxychains-ng/
+sudo make install
+sudo cp src/proxychains.conf  /etc/
+#start
+sslocal -c tools/ss/shadowsocks.json &

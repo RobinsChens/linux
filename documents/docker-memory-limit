@@ -1,0 +1,7 @@
+sudo vim /etc/default/grub:
+# add the  line undertow
+GRUB_CMDLINE_LINUX_DEFAULT="cgroup_enable=memory swapaccount=1"
+#then
+sudo grub-update && sudo reboot
+
+
